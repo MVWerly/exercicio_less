@@ -1,0 +1,29 @@
+@import '../config/maps.less';
+
+header {
+    background-color: #projectColors[headerBGC];
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+
+        .menu {
+            display: flex;
+
+            li {
+                font-weight: bold;
+                margin-left: 1.5rem;
+
+                a {
+                    color: #projectColors[textColor];
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

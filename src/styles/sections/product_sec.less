@@ -1,0 +1,52 @@
+@import '../config/maps.less';
+
+.displayGrid(@repeatTimes, @sizeItem, @columnGap) {
+    display: grid;
+    grid-template-columns: repeat(@repeatTimes, @sizeItem);
+    column-gap: @columnGap;
+    row-gap: 4%;
+    width: 100%;
+}
+
+section {
+    padding: 3.5rem 0;
+
+    .product {
+        .displayGrid(3, 32.66%, 1%);
+        margin-top: 2.5rem;
+
+        @media @breakpointTablet {
+            .displayGrid( 2, 48.5%, 3%);
+        }
+
+        @media @breakpointMobile {
+            display: block;
+        }
+
+        &-item {
+            img {
+                width: 100%;
+                border-radius: 1rem;
+            }
+
+            @media @breakpointMobile {
+                margin-bottom: 2rem;
+            }
+        }
+
+        &-button {
+            display: block;
+            background-color: #projectColors[buttonBGC];
+            color: #projectColors[textColor];
+            text-align: center;
+            padding: 0.5rem 0;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            text-decoration: none;
+
+            &:hover {
+                background-color: #projectColors[buttonHoverBGC];
+            }
+        }
+    }
+}
